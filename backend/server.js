@@ -18,7 +18,8 @@ app.use(cors({
     // Allow requests with no origin (like mobile apps or curl) or if origin matches your Render domain
     const allowedOrigins = [
       "http://localhost:3000", // For local dev
-      "https://yaswanthproject.onrender.com" // Replace with your Render URL after deployment
+      "https://yaswanthproject.onrender.com",
+      "https://renderdeploy-ym8g.onrender.com"
     ];
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
