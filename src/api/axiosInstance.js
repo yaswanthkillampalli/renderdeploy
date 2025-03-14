@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "http://localhost:5000/api",
+    baseURL: "https://yaswanthbackend.onrender.com/api", // Updated to Render URL
     headers: { "Content-Type": "application/json" },
 });
 
@@ -17,7 +17,7 @@ export const registerUser = async (userData) => {
 };
 
 API.interceptors.request.use((config) => {
-    const token = sessionStorage.getItem('token');
+    const token = sessionStorage.getItem("token");
     if (token) {
         config.headers.Authorization = token; // Raw token
     }
